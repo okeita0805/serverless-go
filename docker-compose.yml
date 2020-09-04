@@ -1,0 +1,10 @@
+version: "3"
+services:
+  go: # service名
+    build: ./Docker/golang
+    ports:
+      - 8080:8080
+    tty: true # コンテナの起動永続化
+    volumes:
+      - .:/app # マウントディレクトリ指定
+    working_dir: /app
